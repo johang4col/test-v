@@ -55,6 +55,7 @@ export default function Home({ user }) {
 				setFilteredPlans(planFilteredCity.filter((plan) => plan.planName.toLowerCase().includes(searchByWord.toLowerCase())));
 			}
 		} else {
+			console.log(`${process.env.NEXT_PUBLIC_ABSOLUTE_URL}/api/plan-gay-colombia`);
 			await axios.get(`${process.env.NEXT_PUBLIC_ABSOLUTE_URL}/api/plan-gay-colombia`).then((resp) => {
 				setInitialPlans(resp.data);
 				if (filterByCity === 'Ciudades') {
