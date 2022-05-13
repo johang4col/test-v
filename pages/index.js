@@ -33,10 +33,10 @@ import MobileNavigation from '../components/mobileNavigation/MobileNavigation';
 // };
 
 export default function Home({ user }) {
-	const testd = true;
-	if (testd) {
-		return <div className='flex justify-center items-center text-6xl text-orange h-screen'>hola</div>;
-	}
+	// const testd = true;
+	// if (testd) {
+	// 	return <div className='flex justify-center items-center text-6xl text-orange h-screen'>hola</div>;
+	// }
 
 	console.log('user:X:', user);
 	const [showLeftSideMenu, setShowLeftSideMenu] = useState(false);
