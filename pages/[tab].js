@@ -1,50 +1,27 @@
 import React, { useState, useEffect } from 'react';
-// import { MongoClient } from 'mongodb';
+import Error from 'next/error';
 import { getSession } from 'next-auth/react';
 import axios from 'axios';
 import Head from 'next/head';
 import LeftsideMenu from '../components/LeftSideMenu';
-
-import LoginAndRegisterModal from '../components/Autentication/LoginAndRegisterModal';
-// import Layout from '../components/Layout';
-// import jwt from 'jsonwebtoken';
-// import cookie from 'js-cookie';
-// import axios from 'axios';
-// import * as gtag from '../utils/lib/gtag';
 import PlanGayList from '../components/guia-gay-colombia/PlanGayList';
 import Eventos from '../components/eventos-gay-colombia/Eventos';
+import LoginAndRegisterModal from '../components/Autentication/LoginAndRegisterModal';
+
 import MobileMenuButton from '../components/mobileNavigation/MobileMenuButton';
 import MobileNavigation from '../components/mobileNavigation/MobileNavigation';
 
-// const KEY = '456DF456REWG4';
-
-// const addToCart = () => {
-// 	gtag.event({
-// 		action: 'add to cart',
-// 		category: 'e-coomerce',
-// 		label: 'item added',
-// 		value: 'playing cards',
-// 	});
-// };
-
-// const postRole = async () => {
-// 	// desactivado por el momento
-// 	await axios.post(`${process.env.NEXT_PUBLIC_ABSOLUTE_URL}/api/roles`).then((response) => console.log('this is the response: ', response));
-// };
-
-export default function Home({ user }) {
-	const testd = true;
-	if (testd) {
-		return <div className='flex justify-center items-center text-6xl text-orange h-screen'>hola</div>;
+export default function Tab({ user, tab, errorCode }) {
+	if (errorCode) {
+		return <Error statusCode={errorCode} />;
 	}
 
-	console.log('user:X:', user);
 	const [showLeftSideMenu, setShowLeftSideMenu] = useState(false);
 	const [filterByCity, setFilterByCity] = useState('Ciudades');
 	const [filteredPlans, setFilteredPlans] = useState([]);
 	const [searchByWord, setSearchByWord] = useState('');
 	const [initialPlans, setInitialPlans] = useState([]);
-	const [page, setPage] = useState('');
+	const [page, setPage] = useState(tab);
 
 	// Estados Para el modal de registro y login
 	const [isOpen, setIsOpen] = useState(false);
@@ -101,23 +78,25 @@ export default function Home({ user }) {
 }
 
 export async function getServerSideProps(context) {
+	const { tab } = context.query;
 	const userSession = await getSession(context);
 	const user = userSession;
 
+	const errorCode = null;
+
+	if (tab !== '' && tab !== 'eventos') {
+		return {
+			props: {
+				errorCode: 404,
+			},
+		};
+	}
+
 	return {
 		props: {
+			errorCode,
 			user,
+			tab: tab || '',
 		},
 	};
 }
-
-// const createJWT = () => {
-// 	roles = jwt.sign({ roles: ['megaAdmin', 'eventCreator'] }, KEY);
-// 	cookie.set('roles', roles, { expires: 0.01 / 24 });
-// 	console.log('user roles', roles);
-// };
-
-// const readJWT = (async) => {
-// 	const co2 = jwt.verify(cookie.get('roles'), KEY);
-// 	console.log('cookie read:', co2.roles);
-// };

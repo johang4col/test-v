@@ -1,14 +1,20 @@
 {
-	"name": "testv",
-	"version": "0.1.0",
+	"name": "guia-gay-colombia",
 	"private": true,
 	"scripts": {
+		"cdk": "cdk",
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint"
+		"fix": "npm run fix:eslint && npm run fix:prettier",
+		"fix:eslint": "eslint --fix \"**/*.js\"",
+		"fix:prettier": "prettier --write \"**/*.js\"",
+		"lint": "npm run lint:eslint && npm run lint:prettier",
+		"lint:eslint": "eslint \"**/*.js\"",
+		"lint:prettier": "prettier --check \"**/*.js\"",
+		"sass": "sass ./styles/style.scss ./styles/style.css && sass ./styles/style.scss ./styles/style.min.css --style=compressed"
 	},
-		"dependencies": {
+	"dependencies": {
 		"@aws-cdk/aws-s3": "^1.137.0",
 		"@aws-cdk/core": "1.137.0",
 		"@fortawesome/fontawesome-free": "^5.15.4",

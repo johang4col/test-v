@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-dark {
+	@apply py-2 px-4 cursor-pointer font-bold rounded bg-black text-white transition duration-700 ease-in-out hover:bg-opacity-10 hover:text-black;
+}
+
+.btn-gold {
+	@apply py-2 px-4 cursor-pointer font-bold rounded bg-gold text-black transition duration-700 ease-in-out;
+}

@@ -1,3 +1,35 @@
 {
-  "extends": "next/core-web-vitals"
+	"plugins": ["prettier"],
+	"root": true,
+	"extends": ["eslint:recommended", "plugin:react/recommended", "airbnb-base", "prettier"],
+	"env": {
+		"commonjs": true,
+		"es2020": true,
+		"node": true,
+		"browser": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 2020
+	},
+	"ignorePatterns": [".vscode", ".devcontainer", "dist"],
+	"rules": {
+		"semi": ["warn", "always"],
+		"quotes": ["warn", "single", { "avoidEscape": true }],
+		"no-console": [0],
+		"no-return-await": ["warn"],
+		"indent": [2, "tab"],
+		"no-tabs": "off",
+		"comma-dangle": "off",
+		"implicit-arrow-linebreak": "off",
+		"react/react-in-jsx-scope": "off",
+		"react/prop-types": "off"
+	},
+	"globals": {
+		"React": "writable"
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	}
 }
