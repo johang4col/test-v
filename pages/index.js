@@ -48,6 +48,7 @@ export default function Home({ user }) {
 	useEffect(async () => {
 		console.log('initialPlans.length:', initialPlans.length);
 		if (initialPlans.length > 0) {
+			console.log(`${process.env.NEXT_PUBLIC_ABSOLUTE_URL}/api/plan-gay-colombia`);
 			if (filterByCity === 'Ciudades') {
 				setFilteredPlans(initialPlans.filter((plan) => plan.planName.toLowerCase().includes(searchByWord.toLowerCase())));
 			} else {
