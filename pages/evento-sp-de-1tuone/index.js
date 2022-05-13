@@ -2,7 +2,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable import/no-unresolved */
 import React, { useEffect, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
@@ -143,7 +143,7 @@ export const eventoSp = ({ user, referId = false }) => {
 			<section className='flex flex-col md:flex-row bg-gold text-black text-xl justify-around items-center w-full py-4 mt-8 rounded'>
 				<p>Refiere y gana entradas grátis</p>
 				<a className='btn-dark gap-2 flex justify-center items-center active:bg-white' onClick={() => copyRererLink()}>
-					Click para copiar link y referir Refiere y gana full cover <FontAwesomeIcon icon={['fa', 'copy']} className='fa-2x text-white rounded-md p-0.5 h4 w-12' />
+					{/* Click para copiar link y referir Refiere y gana full cover <FontAwesomeIcon icon={['fa', 'copy']} className='fa-2x text-white rounded-md p-0.5 h4 w-12' /> */}
 				</a>
 			</section>
 
@@ -224,10 +224,10 @@ export const eventoSp = ({ user, referId = false }) => {
 			</section>
 			<section>
 				<a href='https://www.facebook.com/1TuOne/' target='_blank' rel='noreferrer'>
-					<FontAwesomeIcon icon={['fab', 'facebook']} className='fa-2x text-white rounded-md p-0.5 h4 w-12 mb-8 mr-4' />
+					{/* <FontAwesomeIcon icon={['fab', 'facebook']} className='fa-2x text-white rounded-md p-0.5 h4 w-12 mb-8 mr-4' /> */}
 				</a>
 				<a href='https://www.instagram.com/1tuone/' target='_blank' rel='noreferrer'>
-					<FontAwesomeIcon icon={['fab', 'instagram']} className='fa-2x text-white rounded-md p-0.5 h4 w-12 mb-8' />
+					{/* <FontAwesomeIcon icon={['fab', 'instagram']} className='fa-2x text-white rounded-md p-0.5 h4 w-12 mb-8' /> */}
 				</a>
 			</section>
 			<RegisterToEventModal registerToEventIsOpen={registerToEventIsOpen} setRegisterToEventIsOpen={setRegisterToEventIsOpen} user={user} eventName={'Speed Dating'} eventId={eventId} isRegistered={isRegistered} referId={referId} />

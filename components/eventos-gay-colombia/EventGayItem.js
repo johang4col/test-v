@@ -1,7 +1,7 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -59,21 +59,21 @@ const EventGayItemContent = ({ whatsapp, eventUrl, user }) => {
 				</p>
 
 				<a className='btn-gold flex justify-center items-center my-1 gap-4 active:bg-black' onClick={() => copyRererLink()}>
-					Refiere y gana full cover <FontAwesomeIcon icon={['fa', 'copy']} className='fa-2x text-black rounded-md p-0.5 h4 w-12' />
+					{/* Refiere y gana full cover <FontAwesomeIcon icon={['fa', 'copy']} className='fa-2x text-black rounded-md p-0.5 h4 w-12' /> */}
 				</a>
 			</div>
 			{whatsapp ? (
 				<p className='absolute top-2 right-1'>
 					<Link href={`https://web.whatsapp.com/send?phone=57${whatsapp}`}>
 						<a target='_blank' rel='noreferrer'>
-							<FontAwesomeIcon icon={['fab', 'whatsapp']} className='fa-2x text-white rounded-md p-0.5 h4 w-12 bg-peridot-s-100 cursor-pointer' />
+							{/* <FontAwesomeIcon icon={['fab', 'whatsapp']} className='fa-2x text-white rounded-md p-0.5 h4 w-12 bg-peridot-s-100 cursor-pointer' /> */}
 						</a>
 					</Link>
 				</p>
 			) : (
 				<p className='absolute top-2 right-1'>
 					<a target='_blank' rel='noreferrer'>
-						<FontAwesomeIcon icon={['fab', 'whatsapp']} className='fa-2x text-white rounded-md p-0.5 h4 w-12 bg-charcoal-t-300' />
+						{/* <FontAwesomeIcon icon={['fab', 'whatsapp']} className='fa-2x text-white rounded-md p-0.5 h4 w-12 bg-charcoal-t-300' /> */}
 					</a>
 				</p>
 			)}

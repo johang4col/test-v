@@ -5,13 +5,13 @@ import { SessionProvider } from 'next-auth/react';
 import '../styles/tailwind.css';
 import '../styles/style.min.css';
 
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { fab } from '@fortawesome/free-brands-svg-icons';
+// import { library } from '@fortawesome/fontawesome-svg-core';
+// import { fas } from '@fortawesome/free-solid-svg-icons';
+// import { fab } from '@fortawesome/free-brands-svg-icons';
 
 import * as gtag from '../utils/lib/gtag';
 
-library.add(fab, fas);
+// library.add(fab, fas);
 
 const App = ({ Component, pageProps: { session, ...pageProps } }) => {
 	const router = useRouter();

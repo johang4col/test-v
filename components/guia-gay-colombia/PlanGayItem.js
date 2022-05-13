@@ -1,4 +1,4 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -31,14 +31,14 @@ export default function PlantillaPlanGay({ address, city, description, image, pl
 					<p className='absolute top-2 right-1'>
 						<Link href={`https://web.whatsapp.com/send?phone=57${whatsapp}`}>
 							<a target='_blank' rel='noreferrer'>
-								<FontAwesomeIcon icon={['fab', 'whatsapp']} className='fa-2x text-white rounded-md p-0.5 h4 w-12 bg-peridot-s-100 cursor-pointer' />
+								{/* <FontAwesomeIcon icon={['fab', 'whatsapp']} className='fa-2x text-white rounded-md p-0.5 h4 w-12 bg-peridot-s-100 cursor-pointer' /> */}
 							</a>
 						</Link>
 					</p>
 				) : (
 					<p className='absolute top-2 right-1'>
 						<a target='_blank' rel='noreferrer'>
-							<FontAwesomeIcon icon={['fab', 'whatsapp']} className='fa-2x text-white rounded-md p-0.5 h4 w-12 bg-charcoal-t-300' />
+							{/* <FontAwesomeIcon icon={['fab', 'whatsapp']} className='fa-2x text-white rounded-md p-0.5 h4 w-12 bg-charcoal-t-300' /> */}
 						</a>
 					</p>
 				)}
