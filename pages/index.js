@@ -64,6 +64,7 @@ export default function Home({ user }) {
 				}
 			});
 		}
+		console.log('initialPlans:X:', initialPlans);
 	}, [filterByCity, searchByWord]);
 
 	return (
