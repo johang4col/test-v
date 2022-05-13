@@ -46,6 +46,7 @@ export default function Home({ user }) {
 	const [formToRender, setFormToRender] = useState('login');
 
 	useEffect(async () => {
+		console.log('iniciaidno aqui');
 		if (initialPlans.length > 0) {
 			if (filterByCity === 'Ciudades') {
 				setFilteredPlans(initialPlans.filter((plan) => plan.planName.toLowerCase().includes(searchByWord.toLowerCase())));
