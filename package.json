@@ -17,11 +17,6 @@
 	"dependencies": {
 		"@aws-cdk/aws-s3": "^1.137.0",
 		"@aws-cdk/core": "1.137.0",
-		"@fortawesome/fontawesome-free": "^5.15.4",
-		"@fortawesome/fontawesome-svg-core": "^1.2.36",
-		"@fortawesome/free-brands-svg-icons": "^5.15.4",
-		"@fortawesome/free-solid-svg-icons": "^5.15.4",
-		"@fortawesome/react-fontawesome": "^0.1.16",
 		"@headlessui/react": "^1.4.3",
 		"@tailwindcss/forms": "^0.4.0",
 		"aws-sdk": "^2.1048.0",
@@ -41,7 +36,7 @@
 	},
 	"devDependencies": {
 		"@types/jsonwebtoken": "^8.5.6",
-		"autoprefixer": "^10.4.4",
+		"autoprefixer": "^10.4.7",
 		"aws-cdk": "^2.3.0",
 		"eslint": "8.5.0",
 		"eslint-config-airbnb": "^19.0.2",
@@ -53,8 +48,8 @@
 		"eslint-plugin-node": "^11.1.0",
 		"eslint-plugin-prettier": "^4.0.0",
 		"eslint-plugin-react": "^7.28.0",
-		"postcss": "^8.4.12",
+		"postcss": "^8.4.13",
 		"prettier": "^2.5.1",
-		"tailwindcss": "^3.0.23"
+		"tailwindcss": "^3.0.24"
 	}
 }
