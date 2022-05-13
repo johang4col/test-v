@@ -1,4 +1,5 @@
 import Image from 'next/image';
+
 export default function Upload() {
 	const uploadPhoto = async (e) => {
 		const file = e.target.files[0];

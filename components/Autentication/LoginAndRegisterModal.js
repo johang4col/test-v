@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import LoginForm from './LoginForm';

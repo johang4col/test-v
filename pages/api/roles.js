@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 // the next object allow us to connect to our cluster
 import { MongoClient } from 'mongodb';
 // api/plan-gay-colombia
-//POST /api/plan-gay-colomnia
+// POST /api/plan-gay-colomnia
 
 export default async function handler(req, res) {
 	if (req.method === 'POST') {
@@ -20,13 +21,6 @@ export default async function handler(req, res) {
 			res.status(201).json({ message: 'role' });
 		} catch (error) {
 			console.log(error);
-		}
-	}
-
-	if (req.method === 'GET') {
-		try {
-		} catch (error) {
-			console.log(Error);
 		}
 	}
 }

@@ -104,7 +104,8 @@ export default function eventsForm({ userData, setUserData, showPassword, user, 
 
 		if (user) {
 			if ((!user.accessToken.identidadSexual && e.target.identidadSexual.value === '- Select -') || (!user.accessToken.ciudad && e.target.ciudad.value === '- Select -') || (!user.accessToken.insight && !e.target.insight.value)) {
-				alert('Debes llenar todos los campos');
+				// alert('Debes llenar todos los campos');
+				console.log('llena todos los campos');
 			} else {
 				setLoading(true);
 
