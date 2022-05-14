@@ -35,10 +35,10 @@ export default function LoginAndRegisterModal({ isOpen, setIsOpen, formToRender,
 	return (
 		<>
 			<Transition appear show={isOpen} as={Fragment}>
-				<Dialog as='div' className='fixed inset-0 z-10 overflow-y-auto'>
+				<Dialog as='div' className='fixed inset-0 z-10 overflow-y-auto' onClose={closeModal}>
 					<div className='min-h-screen px-4 text-center'>
-						<Transition.Child as={Fragment} enter='ease-out duration-300' enterFrom='opacity-0' enterTo='opacity-100' leave='ease-in duration-200' leaveFrom='opacity-100' leaveTo='opacity-0'>
-							<Dialog.Overlay className='fixed inset-0 opacity-90 bg-black' onClose={closeModal} />
+						<Transition.Child as={Fragment} enter='ease-out duration-300' enterFrom='opacity-0' enterTo='opacity-100' leave='ease-in duration-200' leaveFrom='opacity-100' leaveTo='opacity-0' closeModal={closeModal}>
+							<Dialog.Overlay className='fixed inset-0 opacity-90 bg-black' />
 						</Transition.Child>
 
 						{/* This element is to trick the browser into centering the modal contents. */}
@@ -56,7 +56,7 @@ export default function LoginAndRegisterModal({ isOpen, setIsOpen, formToRender,
 									<button
 										type='button'
 										className='inline-flex justify-center py-2 text-sm font-medium text-blue-900 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500'
-										onClick={() => closeModal()}
+										onClick={closeModal}
 									>
 										Cerrar ventana
 									</button>
